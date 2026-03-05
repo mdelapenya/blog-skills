@@ -1,0 +1,13 @@
+{
+  "name": "blog-skills",
+  "version": "1.0.0",
+  "description": "Five skills for managing a Hugo blog: writing, editing, auditing, planning, and promotion.",
+  "author": {
+    "name": "Manuel de la Peña",
+    "url": "https://github.com/mdelapenya"
+  },
+  "homepage": "https://github.com/mdelapenya/blog-skills",
+  "repository": "https://github.com/mdelapenya/blog-skills",
+  "license": "MIT",
+  "keywords": ["blog", "hugo", "writing", "editing", "content-management"]
+}
