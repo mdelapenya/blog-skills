@@ -100,14 +100,14 @@ blog-skills/
 
 ## Setup
 
-1. Copy the config template and fill in your blog settings:
+1. Copy the config template into your blog repo root:
    ```bash
-   cp skills/blog-config.example.md skills/blog-config.md
+   cp skills/blog-config.example.md /path/to/your-blog-repo/blog-config.md
    ```
-2. Edit `skills/blog-config.md` with your blog's domain, theme, social handles, topic areas, and publication settings
+2. Edit `blog-config.md` in your blog repo with your blog's domain, theme, social handles, topic areas, and publication settings
 3. Optionally customize reference files:
    - `blog-writer/references/front-matter-example.md` — your site's front matter fields
-   - `blog-planner/references/topic-map.md` — generate by running the planner against your content
+   - `topic-map.md` in your blog repo — generate by running the planner against your content
    - `blog-marketer/references/platform-guide.md` — platform-specific guidance (mostly generic)
 
 ## License

@@ -78,7 +78,7 @@ Quick-reference for platform constraints, best practices, and author-specific de
 
 ## Author Social Handles and Tags
 
-Social handles, accounts to tag, and hashtags are configured in `../blog-config.md`. Read that file for the author's specific handles and tagging preferences. If the config file does not exist, use `AskUserQuestion` to ask the author for their handles before generating drafts.
+Social handles, accounts to tag, and hashtags are configured in `blog-config.md` in the blog repo root. Read that file for the author's specific handles and tagging preferences. If the config file does not exist, use `AskUserQuestion` to ask the author for their handles before generating drafts.
 
 ## Tone Reference: Examples from Similar Technical Blogs
 

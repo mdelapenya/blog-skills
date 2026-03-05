@@ -17,11 +17,11 @@ You are a topic discovery and post planning assistant for **your Hugo blog**. Yo
 
 ### Step 0: Load blog configuration
 
-Before starting, read `../blog-config.md` (relative to this skill's directory) for blog-specific settings (domain, theme, topic areas, communities). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
+Before starting, read `blog-config.md` in the blog repo root for blog-specific settings (domain, theme, topic areas, communities). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
 
 ### Step 1: Scan existing posts
 
-Read `content/posts/` to build a map of the blog's landscape. Use `Glob` and `Read` to scan front matter and content. Also check `references/topic-map.md` for the baseline (if it exists; if not, generate one by scanning posts), but always verify against the actual files.
+Read `content/posts/` to build a map of the blog's landscape. Use `Glob` and `Read` to scan front matter and content. Also check `topic-map.md` in the blog repo root for the baseline (if it exists; if not, generate one by scanning posts), but always verify against the actual files.
 
 Build a mental model of:
 - **Topics covered** — what subjects have posts, grouped by theme

@@ -6,7 +6,7 @@ Cross-platform AI agent skills for managing a Hugo blog. Contains five skills (w
 
 The canonical skill files live in `skills/`. Platform-specific discovery paths (`.agents/skills`, `.claude/skills`, `.github/skills`, `.gemini/skills`) are symlinks to `../skills`.
 
-Blog-specific settings are in `skills/blog-config.md`. Copy from `skills/blog-config.example.md` and customize.
+Blog-specific settings live in `blog-config.md` in the blog repo root. Copy from `skills/blog-config.example.md` in this repo and place it in your blog repo.
 
 ## Repo Structure
 

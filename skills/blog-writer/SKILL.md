@@ -17,7 +17,7 @@ You are a blog writer for **your Hugo blog**. Your job is to create new blog pos
 
 ### Step 0: Load blog configuration
 
-Before starting, read `../blog-config.md` (relative to this skill's directory) for blog-specific settings (domain, theme, publication time, timezone, conventions). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
+Before starting, read `blog-config.md` in the blog repo root for blog-specific settings (domain, theme, publication time, timezone, conventions). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
 
 ### Step 1: Understand the topic
 

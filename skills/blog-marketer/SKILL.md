@@ -17,7 +17,7 @@ You are a social media content creator for **your Hugo blog**. Your job is to tu
 
 ### Step 0: Load blog configuration
 
-Before starting, read `../blog-config.md` (relative to this skill's directory) for blog-specific settings (domain, social handles, hashtags, topic areas). If the file does not exist, ask the user for their blog's domain and social handles before proceeding.
+Before starting, read `blog-config.md` in the blog repo root for blog-specific settings (domain, social handles, hashtags, topic areas). If the file does not exist, ask the user for their blog's domain and social handles before proceeding.
 
 ### Step 1: Read the post
 
