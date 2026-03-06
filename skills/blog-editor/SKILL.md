@@ -47,7 +47,7 @@ Use these rules to validate front matter on existing posts:
 - **File naming:** `YYYY-MM-DD-slug-title.md` in `content/posts/`
 - **Date format:** `YYYY-MM-DD HH:MM:SS +ZZZZ` (use the publication time and timezone from `blog-config.md`)
 - **Required fields:** `title`, `date`, `description`, `categories`, `tags`, `type` (use the value from `blog-config.md`, typically `post`). Include `weight` if your theme uses it (check `blog-config.md`).
-- **Optional fields:** `showTableOfContents: true`, `image: "/images/posts/..."`
+- **Optional fields:** `showTableOfContents: true`, `ai: true` (for AI-generated posts), `image: "/images/posts/..."`
 - **Tags:** lowercase, hyphenated strings in double quotes (e.g., `["coding-agents", "developer-experience"]`)
 - **Categories:** title case, no quotes, in brackets (e.g., `[Technology, AI, Software Development]`)
 

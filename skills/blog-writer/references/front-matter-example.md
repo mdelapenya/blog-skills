@@ -12,6 +12,7 @@ tags: ["coding-agents", "developer-experience", "automation"]
 type: post
 weight: 30
 showTableOfContents: true
+ai: true
 image: "/images/posts/optional-cover.png"
 ---
 ```
@@ -26,4 +27,5 @@ image: "/images/posts/optional-cover.png"
 - **type:** Always `post` for blog posts.
 - **weight:** Use the value from `blog-config.md` if your theme uses it for ordering.
 - **showTableOfContents:** Set to `true` for posts with 3+ sections.
+- **ai:** Set to `true` if the post was generated with AI assistance. Controls the authorship banner shown on the post and the robot/human emoji in the posts list. Defaults to `false` (human-written).
 - **image:** Optional. Path relative to `static/`. Used as cover image.
