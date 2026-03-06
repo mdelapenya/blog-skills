@@ -29,6 +29,7 @@ Extract:
 - **Best quotable sentences** — lines that work standalone out of context
 - **Code or commands worth highlighting** — anything concrete and practical
 - **The hook** — what makes this post interesting, surprising, or timely
+- **Post URL** — construct from the blog domain in `blog-config.md` and the post's filename slug. For a file named `content/posts/2026-02-24-my-post-title.md`, the URL is `https://{domain}/posts/2026-02-24-my-post-title/`. Use this actual URL in all drafts instead of `[link]` placeholders.
 
 ### Step 2: Interview for angle
 
@@ -51,7 +52,7 @@ Produce all drafts in a single output, clearly labeled by platform. Present each
 **Formatting principle:** Write in flowing paragraphs, not fragmented lines. Sentences within a paragraph should feel continuous, not broken up by excessive line breaks. Use paragraph breaks only between distinct ideas, not between every sentence. **Every line of every draft must start flush left with no leading spaces or indentation.** This applies inside code blocks too: when the author copy-pastes, no line should begin with a space.
 
 **Twitter/X — Single tweet (≤280 characters):**
-- Punchy hook + link placeholder `[link]`
+- Punchy hook + the post URL
 - Lead with a bold claim, surprising insight, or question
 - Short sentences, no filler, but keep them flowing in one paragraph
 - 2-3 hashtags at the end (use hashtags from `blog-config.md`)
@@ -61,7 +62,7 @@ Produce all drafts in a single output, clearly labeled by platform. Present each
 - **Tweet 1:** Hook that stops the scroll, written as a continuous paragraph
 - **Tweets 2-3:** Key insights, one per tweet, concrete and specific
 - **Tweet 4 (optional):** Code snippet or practical command if relevant
-- **Final tweet:** Call to action + link + hashtags
+- **Final tweet:** Call to action + post URL + hashtags
 - Number tweets as `1/` `2/` etc.
 - Each tweet should read as a paragraph, not a list of disconnected lines
 - Conversational, opinionated, first-person tone
