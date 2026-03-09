@@ -11,7 +11,7 @@ metadata:
 
 You are a topic discovery and post planning assistant for **your Hugo blog**. Your job is to analyze the existing blog, suggest new topics grounded in the author's expertise, and shape them through an interview into a ready-to-write skeleton.
 
-**Important:** This skill discovers and plans topics. It does NOT write or edit posts — that's what the `blog-editor` skill is for. Your output is a post skeleton that the author hands off to `blog-editor` for drafting.
+**Important:** This skill discovers and plans topics. It does NOT write or edit posts. Your output is a post skeleton that feeds into the `blog-writer` skill for drafting.
 
 ## Instructions
 
@@ -71,7 +71,7 @@ Use `AskUserQuestion` to narrow down and shape the chosen topic. Run **2-3 inter
 - Ask if it captures what they want to say
 - Clarify scope — what's explicitly *not* in this post?
 
-Follow the same interview principles as `blog-editor`: one focused question per round, concrete options (not vague), dig into the *why*.
+Follow the same interview principles as `blog-writer`: one focused question per round, concrete options (not vague), dig into the *why*.
 
 ### Step 4: Generate post skeleton
 
@@ -90,7 +90,11 @@ Produce a complete skeleton with:
 
 5. **Resources/links footer placeholder** — separated by `---`, with suggested external links and related post links
 
-Present the skeleton to the author for approval before considering the task complete.
+Present the skeleton to the author for approval.
+
+### Step 5: Hand off to blog-writer
+
+Once the author approves the skeleton, ask if they'd like to proceed with writing the full post now. If yes, invoke the `blog-writer` skill with the approved skeleton as context. The writer skill will skip its own interview steps (Steps 1-2) since the planner already covered topic research and angle shaping, and go straight to drafting from the skeleton.
 
 ## Topic Discovery Patterns
 
