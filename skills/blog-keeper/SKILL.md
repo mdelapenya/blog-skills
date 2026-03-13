@@ -34,13 +34,23 @@ Build two registries:
 
 ### Step 2: Scan for internal links
 
-Use `Grep` to find all internal links across posts. Search for these patterns:
+Scan **two sources** of internal post links:
+
+#### 2a: Front matter `related` arrays
+
+Use `Grep` to find all `related:` fields in front matter. For each post that has a `related:` array, extract each path (format: `/posts/YYYY-MM-DD-slug`). These render as visual cards at the bottom of posts via the `related-posts.html` partial.
+
+#### 2b: Markdown content links
+
+Use `Grep` to find all internal links in the markdown body. Search for these patterns:
 
 - Markdown links pointing to posts: `\(/posts/[^\)]+\)`
 - Raw href links: `href="/posts/[^"]+"`
 - Plain `/posts/YYYY-MM-DD-` references in text
 
-For each internal link found:
+#### Validation (for both sources)
+
+For each internal link found (from either front matter or content):
 1. Extract the target slug (e.g., `/posts/2025-12-01-my-post`)
 2. Check if a file named `content/posts/2025-12-01-my-post.md` exists on disk
 3. If the file does not exist at all, record it as a **broken link** (target does not exist)

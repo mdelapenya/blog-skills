@@ -14,6 +14,9 @@ weight: 30
 showTableOfContents: true
 ai: true
 image: "/images/posts/optional-cover.png"
+related:
+  - "/posts/2026-02-24-related-post-slug"
+  - "/posts/2026-02-25-another-related-post"
 ---
 ```
 
@@ -29,3 +32,4 @@ image: "/images/posts/optional-cover.png"
 - **showTableOfContents:** Set to `true` for posts with 3+ sections.
 - **ai:** Set to `true` if the post was generated with AI assistance. Controls the authorship banner shown on the post and the robot/human emoji in the posts list. Defaults to `false` (human-written).
 - **image:** Optional. Path relative to `static/`. Used as cover image.
+- **related:** Optional. Array of internal post paths for the related posts section. These render as visual cards (with cover images) at the bottom of the post, powered by the `related-posts.html` partial. Use the format `/posts/YYYY-MM-DD-slug` (no `.md`, no trailing slash). Do NOT put related posts as markdown links in the content body.

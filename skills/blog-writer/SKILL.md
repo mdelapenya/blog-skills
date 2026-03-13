@@ -62,7 +62,7 @@ After writing:
 - **File naming:** `YYYY-MM-DD-slug-title.md` in `content/posts/`
 - **Date format:** `YYYY-MM-DD HH:MM:SS +ZZZZ` (use the publication time and timezone from `blog-config.md`)
 - **Required fields:** `title`, `date`, `description`, `categories`, `tags`, `type` (use the value from `blog-config.md`, typically `post`). Include `weight` if your theme uses it (check `blog-config.md`).
-- **Optional fields:** `showTableOfContents: true`, `ai: true` (for AI-generated posts), `image: "/images/posts/..."`
+- **Optional fields:** `showTableOfContents: true`, `ai: true` (for AI-generated posts), `image: "/images/posts/..."`, `related: ["/posts/YYYY-MM-DD-slug", ...]`
 - **Tags:** lowercase, hyphenated strings in double quotes (e.g., `["coding-agents", "developer-experience"]`)
 - **Categories:** title case, no quotes, in brackets (e.g., `[Technology, AI, Software Development]`)
 
@@ -85,7 +85,8 @@ See `references/front-matter-example.md` for a complete template.
 2. **Problem statement section** — why this matters
 3. **Core content sections** — the "meat", each with one main idea
 4. **Brief closing section** — short wrap-up, ideally a memorable one-liner
-5. **Resources/links footer** — separated by `---`, italic links to related posts and external resources
+5. **Related posts** — added as a `related:` array in front matter (NOT as markdown links in the content). These render as visual cards with cover images at the bottom of the post. Use the format `/posts/YYYY-MM-DD-slug`.
+6. **Resources/links footer** — separated by `---`, italic links to external resources only (no internal post links here; those go in the `related` front matter)
 
 ## Interview Pattern
 
