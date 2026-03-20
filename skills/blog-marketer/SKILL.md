@@ -108,6 +108,7 @@ Match the blog's voice across all platforms:
 - **No corporate-speak:** "We're excited to announce" is never the right tone
 - **No em dashes (—).** Use colons, periods, commas, or parentheses instead. AI writing tell.
 - **No leading whitespace on paragraphs.** Flush left, always.
+- **Don't assume readers know your other posts.** Social media audiences haven't read the blog. When a draft references a concept, pattern, or experience from another post, add a brief inline explanation so the draft stands on its own. "I wrote about the supervision model from my Tesla autopilot post" means nothing to someone scrolling LinkedIn. "I compared AI coding agents to Tesla autopilot: both need a human watching" does.
 
 ## Platform Idioms
 
