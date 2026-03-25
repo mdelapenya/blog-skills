@@ -9,6 +9,7 @@
 - **Name:** My Blog
 - **Hugo theme:** PaperMod
 - **Blog repo path:** ~/path/to/your-blog-repo
+- **Subscribe URL:** <domain>/<subscribe-url>
 
 ## Author
 

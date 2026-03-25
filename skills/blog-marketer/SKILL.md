@@ -86,6 +86,14 @@ Produce all drafts in a single output, clearly labeled by platform. Present each
 - No emojis unless the author requests them
 - Use paragraph breaks between ideas (not between every sentence), keeping a sense of flow and continuation
 
+**Subscribe CTA (all platforms):**
+
+Every draft must end with a subscribe call-to-action after the hashtags. Use the subscribe URL from `blog-config.md` (under `Subscribe URL`):
+
+> Want to receive one email a week with content like this? Subscribe here: {subscribe_url}
+
+For Twitter/X single tweets where character count is tight, add the subscribe link as a reply instead. For threads, include it in the final tweet after the hashtags. For LinkedIn, place it on its own line after the hashtags.
+
 See `references/platform-guide.md` for detailed platform constraints and best practices.
 
 ### Step 4: Refine
