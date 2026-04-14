@@ -60,7 +60,7 @@ After writing:
 ## Front Matter Conventions
 
 - **File naming:** `YYYY-MM-DD-slug-title.md` in `content/posts/`
-- **Date format:** `YYYY-MM-DD HH:MM:SS +ZZZZ` (use the publication time and timezone from `blog-config.md`)
+- **Date format:** `YYYY-MM-DD HH:MM:SS +ZZZZ` (use the publication time from `blog-config.md`). The timezone offset depends on whether the post's publication date falls in CET or CEST. Check `blog-config.md` for the timezone offset rule. To determine which offset applies, run `date` or check a calendar: CET (+0100) runs from the last Sunday of October to the last Sunday of March; CEST (+0200) covers the rest of the year.
 - **Required fields:** `title`, `date`, `description`, `categories`, `tags`, `type` (use the value from `blog-config.md`, typically `post`). Include `weight` if your theme uses it (check `blog-config.md`).
 - **Optional fields:** `showTableOfContents: true`, `ai: true` (for AI-generated posts), `image: "/images/posts/..."`, `related: ["/posts/YYYY-MM-DD-slug", ...]`
 - **Tags:** lowercase, hyphenated strings in double quotes (e.g., `["coding-agents", "developer-experience"]`)

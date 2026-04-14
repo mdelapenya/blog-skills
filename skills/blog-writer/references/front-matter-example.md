@@ -5,7 +5,7 @@ Complete template with all fields:
 ```yaml
 ---
 title: "Post Title"
-date: 2026-02-24 09:00:00 +0000
+date: 2026-02-24 09:00:00 +0100
 description: "Short summary of the post (shows in previews and SEO)"
 categories: [Technology, AI, Software Development]
 tags: ["coding-agents", "developer-experience", "automation"]
@@ -23,7 +23,7 @@ related:
 ## Field notes
 
 - **title:** Use double quotes. Title case.
-- **date:** Always include timezone offset (see `blog-config.md` for your timezone). Use the publication time from your config.
+- **date:** Always include timezone offset. Use `+0100` (CET) for winter dates and `+0200` (CEST) for summer dates. See `blog-config.md` for the exact cutover rule. Use the publication time from your config.
 - **description:** One sentence. Shows in link previews and search results.
 - **categories:** Title case, no quotes. Common values: `Technology`, `AI`, `Software Development`, `Open Source`.
 - **tags:** Lowercase, hyphenated, in double quotes. Keep to 3-6 tags.
