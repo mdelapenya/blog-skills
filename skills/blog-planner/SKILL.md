@@ -4,7 +4,7 @@ description: Discover and plan new blog post topics for your Hugo blog. Analyzes
 allowed-tools: Read Grep Glob AskUserQuestion
 metadata:
   author: blog-skills
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Blog Planner Skill
@@ -66,9 +66,10 @@ Use `AskUserQuestion` to narrow down and shape the chosen topic. Run **2-3 inter
 - What's the one thing the reader should walk away with?
 - Offer 2-3 concrete angle options based on their choice
 
-**Round 3 — Sharpening the thesis:**
+**Round 3 — Sharpening the thesis and the reader shift:**
 - Based on their answers, propose a one-sentence thesis
 - Ask if it captures what they want to say
+- **Reader shift:** ask what the reader believes *before* reading this and what they should believe *after*, and get it as a "from X to Y". A takeaway is what the reader carries away; a shift is what changes in their head. Writing is not about explaining what the author thinks, it's about changing what the reader thinks, so this line is what the whole post has to earn
 - Clarify scope — what's explicitly *not* in this post?
 
 Follow the same interview principles as `blog-writer`: one focused question per round, concrete options (not vague), dig into the *why*.
@@ -77,24 +78,28 @@ Follow the same interview principles as `blog-writer`: one focused question per 
 
 Produce a complete skeleton with:
 
-1. **Complete front matter** — following the conventions in `blog-writer/references/front-matter-example.md`:
+1. **Reader shift** — one line, "from X to Y", written at the top of the skeleton as a comment. Every section below it exists to move the reader along that line, and `blog-editor` checks the finished post against it
+
+2. **Complete front matter** — following the conventions in `blog-writer/references/front-matter-example.md`:
    - File name: `YYYY-MM-DD-slug-title.md`
    - All required fields: `title`, `date`, `description`, `categories`, `tags`, `type`, `weight`
    - Appropriate `showTableOfContents: true` for 3+ sections
 
-2. **Hook intro draft** (1-2 paragraphs) — a conversational opening that sets up the topic with a personal angle, following the blog's tone (first-person, practical, analogy-driven)
+3. **Hook intro draft** (1-2 paragraphs) — a conversational opening that sets up the topic with a personal angle, following the blog's tone (first-person, practical, analogy-driven)
 
-3. **Section headings with descriptions** — each heading followed by a 1-sentence description of that section's core idea, so the author knows what to write
+4. **Section headings with descriptions** — each heading followed by a 1-sentence description of that section's core idea, so the author knows what to write
 
-4. **Suggested cross-references** — specific existing posts to link to and where in the new post they'd fit
+5. **Suggested visuals** — for each section, whether it needs a diagram, a screenshot, or a table, and what it should show. Sections that are a sequence of steps, a tool's output, or a comparison across dimensions are the usual candidates
 
-5. **Resources/links footer placeholder** — separated by `---`, with suggested external links and related post links
+6. **Suggested cross-references** — specific existing posts to link to and where in the new post they'd fit
+
+7. **Resources/links footer placeholder** — separated by `---`, with suggested external links and related post links
 
 Present the skeleton to the author for approval.
 
 ### Step 5: Hand off to blog-writer
 
-Once the author approves the skeleton, ask if they'd like to proceed with writing the full post now. If yes, invoke the `blog-writer` skill with the approved skeleton as context. The writer skill will skip its own interview steps (Steps 1-2) since the planner already covered topic research and angle shaping, and go straight to drafting from the skeleton.
+Once the author approves the skeleton, ask if they'd like to proceed with writing the full post now. If yes, invoke the `blog-writer` skill with the approved skeleton as context. The writer skill will skip its own interview steps (Steps 1-2) since the planner already covered topic research, angle shaping, and the reader shift, and pick up at the visuals pass (Step 3) before drafting from the skeleton.
 
 ## Topic Discovery Patterns
 

@@ -17,7 +17,9 @@ skills/                          # Canonical skill files (edit here)
 │   └── references/
 │       └── front-matter-example.md
 ├── blog-editor/                 # Review and edit existing posts
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/
+│       └── voice-examples.example.md
 ├── blog-translator/             # Translate posts into the blog's other languages
 │   ├── SKILL.md
 │   └── references/
@@ -82,7 +84,14 @@ These conventions apply to all blog content the skills produce:
 - No leading whitespace on paragraphs
 - Practical over theoretical: CLI commands, code snippets, real examples
 - Short paragraphs, one idea each
-- Bold for key terms, bullet lists for enumerations
+- Short sentences: split anything past roughly 30 words, but vary the length
+- Bold sparingly, and never starting mid-sentence; bullet lists for enumerations
+- Every post states a reader shift ("from X to Y") that the post has to earn
+- Diagrams, screenshots, and tables where they beat prose; a post whose only image is the cover is a smell
+
+Blog-specific voice lives in `voice-examples.md` in the blog repo root, copied from
+`skills/blog-editor/references/voice-examples.example.md`. The rules above say what is
+wrong; that file says what good looks like for a given blog.
 
 ## Verification
 
