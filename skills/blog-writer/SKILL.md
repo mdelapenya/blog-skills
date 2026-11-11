@@ -4,7 +4,7 @@ description: Create new blog posts for your Hugo blog. Handles front matter, str
 allowed-tools: Read Edit Write Grep Glob AskUserQuestion
 metadata:
   author: blog-skills
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Blog Writer Skill
@@ -30,9 +30,10 @@ Before writing anything:
 
 Use `AskUserQuestion` to draw out the author's actual perspective. Run **2-3 interview rounds**:
 
-**Round 1 — Angle and experience:**
+**Round 1 — Angle, experience, and reader shift:**
 - What personal experience or project anchors this topic?
 - What's the one thing the reader should walk away with?
+- **Reader shift:** what does the reader believe *before* reading this, and what should they believe *after*? Push for a "from X to Y". A takeaway is what the reader carries away; a shift is what changes in their head. Writing is not about explaining what you think, it's about changing what the reader thinks, so this answer, not the topic, is what the post has to earn.
 - Offer 2-3 concrete angle options based on the topic
 
 **Round 2 — Key points and structure:**
@@ -45,17 +46,31 @@ Use `AskUserQuestion` to draw out the author's actual perspective. Run **2-3 int
 - Clarify any gaps or contradictions from previous rounds
 - Confirm the structure before drafting
 
-### Step 3: Draft the post
+### Step 3: Plan the visuals
+
+Before drafting, walk the planned sections and ask of each one: would a diagram, a screenshot, or a table carry this faster than prose? Prose is the default, but these three cases rarely are:
+
+- **Diagram** — a sequence of steps, a pipeline, an architecture, anything you would explain with arrows
+- **Screenshot** — a UI, a terminal session, or tool output the reader has not seen
+- **Table** — three or more things compared across the same two or more dimensions
+
+A post whose only image is the cover is the common failure mode, not a neutral outcome. Screenshots and diagrams replace paragraphs of explanation, and a post that never uses one is usually a post making the reader hold a picture in their head.
+
+For each visual the post needs, agree the intent with the author and use the images directory from `blog-config.md` for the path (typically `static/images/posts/YYYY-MM-DD-slug/`). If the asset does not exist yet, write the markdown with its final path and list for the author exactly which images to produce. Never point at an image nobody is going to create.
+
+### Step 4: Draft the post
 
 Write the complete post following front matter conventions, structure patterns, and tone rules below. Create the file in `content/posts/` with the correct naming convention.
 
-### Step 4: Validate
+### Step 5: Validate
 
 After writing:
 - Re-read the full post for flow and consistency
+- Check the post delivers the reader shift agreed in Step 2. If the reader could finish it believing exactly what they believed before, the post has not landed yet
 - Verify all front matter fields are present and correctly formatted
 - Check that cross-references point to existing posts (use `Glob` to verify)
 - Confirm no section restates what another section already covered
+- Confirm every image path written into the post is either an existing file or on the list of assets the author still has to produce
 
 ## Front Matter Conventions
 
@@ -74,7 +89,9 @@ See `references/front-matter-example.md` for a complete template.
 - **Concise.** One idea per paragraph. Avoid dense walls of text.
 - **Practical over theoretical.** Include CLI commands, code snippets, and real examples.
 - **Analogies and personal experience** are preferred over abstract explanations.
-- **Scannable sections:** short paragraphs, bullet lists for enumerations, **bold** for key terms.
+- **Scannable sections:** short paragraphs, bullet lists for enumerations.
+- **Short sentences.** Long sentences hide the point. If a sentence runs past roughly 30 words, or needs two commas to stay upright, split it. Vary the length so the prose still has rhythm: a long sentence is fine when the short one after it lands the point.
+- **Bold sparingly.** Bold only means something while it stays rare. A handful of key terms across a post, not one per paragraph. Never start a bold phrase mid-sentence: restructure so it opens the sentence or the paragraph.
 - **Closing should be short and punchy**, not a re-summary of the whole post.
 - **No em dashes (—).** Use colons, periods, commas, semicolons, or parentheses instead. Em dashes are an AI writing tell. Replace `X — Y` with `X. Y`, `X: Y`, `X, Y`, or `X (Y)` depending on context.
 - **No leading whitespace on paragraphs.** Never start a paragraph with spaces or indentation. Flush left, always.
@@ -106,10 +123,11 @@ Example 1: Create a new post from a topic
 User says: "Create a new post about Docker sandboxes"
 Actions:
 1. Scan `content/posts/` for existing sandbox or Docker posts
-2. Interview the user: What's the angle? What experience anchors it? What should the reader take away?
-3. Generate front matter from the template
-4. Draft the full post: hook intro, problem statement, core sections, closing, resources footer
-5. Validate front matter, cross-references, and flow
+2. Interview the user: What's the angle? What experience anchors it? What should the reader believe after reading that they didn't before?
+3. Decide the visuals: the sandbox lifecycle is a diagram, the CLI output is a screenshot
+4. Generate front matter from the template
+5. Draft the full post: hook intro, problem statement, core sections, closing, resources footer
+6. Validate front matter, cross-references, flow, image paths, and that the post earns the reader shift
 
 Example 2: Write a post from a conference talk
 User says: "Write a post based on my Testcontainers talk"

@@ -82,7 +82,10 @@ These conventions apply to all blog content the skills produce:
 - No leading whitespace on paragraphs
 - Practical over theoretical: CLI commands, code snippets, real examples
 - Short paragraphs, one idea each
-- Bold for key terms, bullet lists for enumerations
+- Short sentences: split anything past roughly 30 words, but vary the length
+- Bold sparingly, and never starting mid-sentence; bullet lists for enumerations
+- Every post states a reader shift ("from X to Y") that the post has to earn
+- Diagrams, screenshots, and tables where they beat prose; a post whose only image is the cover is a smell
 
 ## Verification
 
