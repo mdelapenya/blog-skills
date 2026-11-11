@@ -47,9 +47,15 @@ single-language.
   can be detected)
 - **Language conventions file:** language-conventions.md in the blog repo root
   (copy from `skills/blog-translator/references/language-conventions.example.md`)
-- **Voice corpus:** `corpus/<lang>.md` in the blog repo root, one per language
-  (copy from `skills/blog-editor/references/corpus.example.md`); skills load only
-  the file for the post's language
+
+## Voice
+
+Used by blog-writer, blog-editor and blog-translator to learn the blog's voice from the blog itself.
+
+- **Voice reference posts:**
+  (slugs, one list per language; leave blank to use the most recent posts
+  originally written in the post's language. Posts with `translatedFrom` or
+  `ai: true` are never used.)
 
 ## Front Matter Defaults
 

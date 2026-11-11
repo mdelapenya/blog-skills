@@ -19,7 +19,7 @@ You are a blog writer for **your Hugo blog**. Your job is to create new blog pos
 
 Before starting, read `blog-config.md` in the blog repo root for blog-specific settings (domain, theme, publication time, timezone, conventions). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
 
-Also read the voice corpus for the post's language: `corpus/<lang>.md` in the blog repo root (for example `corpus/en.md`, `corpus/es.md`). Load only that one file, never the whole directory. Take the language from the post (the **Languages** section of `blog-config.md` says how it is paired); on a single-language blog, read the only file in `corpus/`. It holds the author's own corpus: openings, closings, and before/after rewrites that show what "on voice" means in that language. The conventions below tell you what is wrong; the corpus tells you what good looks like here. If the file does not exist, see `blog-editor/references/corpus.example.md` for the shape and offer to start one.
+Also learn the voice from the blog itself. Find the post's language (the **Languages** section of `blog-config.md` says how posts are paired), then read **only the opening and the closing** of 3 to 5 reference posts in that language: the slugs under **Voice reference posts** in `blog-config.md`, or, when that is blank, the most recent ones. Use only posts originally written in that language: skip any post with `translatedFrom` in its front matter, and any with `ai: true`. Never read the whole posts or posts in other languages. The conventions below tell you what is wrong; those openings and closings show what good looks like here.
 
 ### Step 1: Understand the topic
 
