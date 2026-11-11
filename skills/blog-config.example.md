@@ -28,6 +28,26 @@
 - **Timezone offset:** +0000
 - **Deployment notes:** Posts go live after deploy. Adjust the time and timezone to match your deployment pipeline.
 
+## Languages
+
+Used by the blog-translator skill. Omit this whole section if your blog is
+single-language.
+
+- **Default language:** en
+- **Additional languages:** es
+- **Pairing mechanism:** translationKey
+  (`translationKey` | `filename-suffix` | `content-dir`)
+- **Translate slugs:** yes
+- **Filename pattern:** `YYYY-MM-DD-<slug-in-that-language>.<lang>.md`
+- **Write both languages on approval:** yes
+  (when a draft is approved, blog-translator runs before the post is committed,
+  so a post never lands in only one language)
+- **Record source commit:** yes
+  (each translation carries `translatedFrom: <short-sha>` so stale translations
+  can be detected)
+- **Language conventions file:** language-conventions.md in the blog repo root
+  (copy from `skills/blog-translator/references/language-conventions.example.md`)
+
 ## Front Matter Defaults
 
 - **type:** post

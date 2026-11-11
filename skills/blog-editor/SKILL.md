@@ -39,6 +39,7 @@ After editing, re-read the full post to check that:
 - The post still reads naturally from start to finish
 - All cross-reference links point to existing posts (verify with `Glob`)
 - Run `/blog-keeper` for comprehensive link and cross-reference validation across all posts
+- If `blog-config.md` has a **Languages** section, hand the approved post to `blog-translator` before it is committed, so it never lands in only one language
 
 ## Front Matter Conventions
 

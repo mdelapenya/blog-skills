@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Cross-platform AI agent skills for managing a Hugo blog. Contains five skills (writer, editor, keeper, planner, marketer) that work with Claude Code, GitHub Copilot, OpenAI Codex, and Gemini CLI.
+Cross-platform AI agent skills for managing a Hugo blog. Contains six skills (writer, editor, translator, keeper, planner, marketer) that work with Claude Code, GitHub Copilot, OpenAI Codex, and Gemini CLI.
 
 The canonical skill files live in `skills/`. Platform-specific discovery paths (`.agents/skills`, `.claude/skills`, `.github/skills`, `.gemini/skills`) are symlinks to `../skills`.
 
@@ -18,6 +18,10 @@ skills/                          # Canonical skill files (edit here)
 │       └── front-matter-example.md
 ├── blog-editor/                 # Review and edit existing posts
 │   └── SKILL.md
+├── blog-translator/             # Translate posts into the blog's other languages
+│   ├── SKILL.md
+│   └── references/
+│       └── language-conventions.example.md
 ├── blog-keeper/                 # Audit links and cross-references (read-only)
 │   └── SKILL.md
 ├── blog-planner/                # Discover and plan new topics
@@ -83,7 +87,7 @@ These conventions apply to all blog content the skills produce:
 ## Verification
 
 ```bash
-# All platform paths show the same 5 skills
+# All platform paths show the same 6 skills
 ls skills/ .agents/skills/ .claude/skills/ .github/skills/ .gemini/skills/
 
 # User-global symlinks resolve correctly
