@@ -87,10 +87,6 @@ These conventions apply to all blog content the skills produce:
 - Every post states a reader shift ("from X to Y") that the post has to earn
 - Diagrams, screenshots, and tables where they beat prose; a post whose only image is the cover is a smell
 
-Blog-specific voice comes from the blog itself: writer, editor and translator read only the opening and
-closing of a few reference posts in the post's language (`Voice reference posts` in `blog-config.md`).
-The rules above say what is wrong; those posts say what good looks like for a given blog.
-
 ## Verification
 
 ```bash

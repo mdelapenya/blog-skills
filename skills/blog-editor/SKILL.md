@@ -19,8 +19,6 @@ You are a blog editor for **your Hugo blog**. Your job is to review and edit exi
 
 Before starting, read `blog-config.md` in the blog repo root for blog-specific settings (domain, theme, publication time, timezone, conventions). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
 
-Also learn the voice from the blog itself. Find the post's language (the **Languages** section of `blog-config.md` says how posts are paired), then read **only the opening and the closing** of 3 to 5 reference posts in that language: the slugs under **Voice reference posts** in `blog-config.md`, or, when that is blank, the most recent ones. Use only posts originally written in that language: skip any post with `translatedFrom` in its front matter. Never read the whole posts or posts in other languages. The conventions in this skill tell you what is wrong; those openings and closings show what good looks like here, which is the harder half of editing.
-
 ### Step 1: Read the post
 
 Always read the full post before making any changes. Use `Grep` to check for related posts that might inform your edits (cross-reference opportunities, consistency checks).

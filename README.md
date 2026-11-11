@@ -110,7 +110,7 @@ blog-skills/
    ```bash
    cp skills/blog-config.example.md /path/to/your-blog-repo/blog-config.md
    ```
-2. Edit `blog-config.md` in your blog repo with your blog's domain, theme, social handles, topic areas, and publication settings. Optionally list **Voice reference posts**: the writer, editor and translator learn your voice from the openings and closings of those posts, so no separate voice file is needed.
+2. Edit `blog-config.md` in your blog repo with your blog's domain, theme, social handles, topic areas, and publication settings.
 3. If your blog publishes in more than one language, fill in the **Languages**
    section of `blog-config.md` and copy the conventions template:
    ```bash

@@ -21,7 +21,7 @@ Your output is always two things: the translated file, and a short **decisions l
 
 Read `blog-config.md` in the blog repo root, in particular its **Languages** section: the default language, the additional languages, the pairing mechanism, and whether slugs are translated. If there is no Languages section, the blog is not set up for multilingual publishing yet: say so, show the author the block from `blog-config.example.md`, and stop. Do not invent a convention.
 
-Also learn the target voice from the blog itself: read **only the opening and the closing** of 3 to 5 posts originally written in the target language (the slugs under **Voice reference posts** in `blog-config.md`, or the most recent ones when that is blank). Skip posts with `translatedFrom`, and never read whole posts. These are the single highest-value input this skill has: without them you are guessing at register, and register is most of what makes a translation sound translated. Never carry an opening or closing over from the source post into the target: an opening that works in one language, calqued into another, sounds calqued. If the target language has no original posts yet, say so once and proceed from `language-conventions.md` alone.
+Also learn the target voice from the blog itself: read **only the opening and the closing** of 3 to 5 of the most recent posts originally written in the target language, skipping any with `translatedFrom` in its front matter, and never whole posts. This is the single highest-value input this skill has: without it you are guessing at register, and register is most of what makes a translation sound translated. Never carry an opening or closing over from the source post into the target: an opening that works in one language, calqued into another, sounds calqued. If the target language has no original posts yet, say so once and proceed from `language-conventions.md` alone.
 
 Finally read `references/language-conventions.md` in the blog repo root if it exists, falling back to `references/language-conventions.example.md` in this skill for the shape.
 
@@ -119,7 +119,7 @@ A translation is finished when a reader of the target language cannot tell which
 Example 1: Translate a single post
 User says: "Translate the post about model tiering into Spanish"
 Actions:
-1. Read `blog-config.md` Languages section and the openings and closings of the Spanish reference posts
+1. Read `blog-config.md` Languages section and the openings and closings of recent original Spanish posts
 2. Read the full source post, state its reader shift and its frame
 3. Inventory code blocks, identifiers and links that pass through untouched
 4. Translate section by section, then adapt title, description and slug

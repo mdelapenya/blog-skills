@@ -48,15 +48,6 @@ single-language.
 - **Language conventions file:** language-conventions.md in the blog repo root
   (copy from `skills/blog-translator/references/language-conventions.example.md`)
 
-## Voice
-
-Used by blog-writer, blog-editor and blog-translator to learn the blog's voice from the blog itself.
-
-- **Voice reference posts:**
-  (slugs, one list per language; leave blank to use the most recent posts
-  originally written in the post's language. Posts with `translatedFrom` are
-  never used, because they are translations.)
-
 ## Front Matter Defaults
 
 - **type:** post
