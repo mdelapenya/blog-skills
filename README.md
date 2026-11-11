@@ -1,6 +1,6 @@
 # Hugo Blog Skills
 
-Five AI agent skills for managing a Hugo blog: writing, editing, auditing, planning, and promotion.
+Six AI agent skills for managing a Hugo blog: writing, editing, translating, auditing, planning, and promotion.
 
 Reusable AI agent skills for managing any Hugo blog.
 
@@ -10,6 +10,7 @@ Reusable AI agent skills for managing any Hugo blog.
 |---|---|---|
 | **blog-writer** | Create new posts through an interview-driven workflow | "write a post", "new blog post", "draft a post" |
 | **blog-editor** | Review and edit existing posts for tone, structure, and conventions | "review this post", "edit the blog post", "check my front matter" |
+| **blog-translator** | Translate existing posts into the blog's other languages | "translate this post", "write the Spanish version", "check stale translations" |
 | **blog-keeper** | Audit internal links, cross-references, and "coming soon" teasers | "check blog links", "audit posts", "find broken links" |
 | **blog-planner** | Discover and plan new topics by analyzing existing content | "new post idea", "what should I write about", "brainstorm posts" |
 | **blog-marketer** | Generate LinkedIn and Twitter/X content to promote posts | "promote this post", "share on LinkedIn", "tweet about this" |
@@ -61,6 +62,7 @@ REPO=/path/to/hugo-blog-skills/skills
 # Claude Code (user-global)
 ln -s $REPO/blog-writer ~/.claude/skills/blog-writer
 ln -s $REPO/blog-editor ~/.claude/skills/blog-editor
+ln -s $REPO/blog-translator ~/.claude/skills/blog-translator
 ln -s $REPO/blog-keeper ~/.claude/skills/blog-keeper
 ln -s $REPO/blog-planner ~/.claude/skills/blog-planner
 ln -s $REPO/blog-marketer ~/.claude/skills/blog-marketer
@@ -77,6 +79,10 @@ blog-skills/
 │   │       └── front-matter-example.md
 │   ├── blog-editor/
 │   │   └── SKILL.md
+│   ├── blog-translator/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── language-conventions.example.md
 │   ├── blog-keeper/
 │   │   └── SKILL.md
 │   ├── blog-planner/
@@ -105,7 +111,12 @@ blog-skills/
    cp skills/blog-config.example.md /path/to/your-blog-repo/blog-config.md
    ```
 2. Edit `blog-config.md` in your blog repo with your blog's domain, theme, social handles, topic areas, and publication settings
-3. Optionally customize reference files:
+3. If your blog publishes in more than one language, fill in the **Languages**
+   section of `blog-config.md` and copy the conventions template:
+   ```bash
+   cp skills/blog-translator/references/language-conventions.example.md /path/to/your-blog-repo/language-conventions.md
+   ```
+4. Optionally customize reference files:
    - `blog-writer/references/front-matter-example.md` — your site's front matter fields
    - `topic-map.md` in your blog repo — generate by running the planner against your content
    - `blog-marketer/references/platform-guide.md` — platform-specific guidance (mostly generic)
