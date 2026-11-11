@@ -80,7 +80,7 @@ blog-skills/
 │   ├── blog-editor/
 │   │   ├── SKILL.md
 │   │   └── references/
-│   │       └── voice-examples.example.md
+│   │       └── corpus.example.md
 │   ├── blog-translator/
 │   │   ├── SKILL.md
 │   │   └── references/
@@ -113,11 +113,12 @@ blog-skills/
    cp skills/blog-config.example.md /path/to/your-blog-repo/blog-config.md
    ```
 2. Edit `blog-config.md` in your blog repo with your blog's domain, theme, social handles, topic areas, and publication settings
-3. Copy the voice corpus template into your blog repo root and fill it with your own writing:
+3. Create a voice corpus per language in your blog repo, from the template, and fill each with writing originally composed in that language:
    ```bash
-   cp skills/blog-editor/references/voice-examples.example.md /path/to/your-blog-repo/voice-examples.md
+   mkdir -p /path/to/your-blog-repo/corpus
+   cp skills/blog-editor/references/corpus.example.md /path/to/your-blog-repo/corpus/en.md
    ```
-   `blog-writer` and `blog-editor` read it in Step 0. It lives in the blog repo, not here and not in an agent's memory, so it travels across machines and across agents.
+   `blog-writer`, `blog-editor` and `blog-translator` read only the file for the post's language in Step 0 (progressive disclosure: the other languages never load). It lives in the blog repo, not here and not in an agent's memory, so it travels across machines and across agents.
 4. If your blog publishes in more than one language, fill in the **Languages**
    section of `blog-config.md` and copy the conventions template:
    ```bash

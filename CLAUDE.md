@@ -19,7 +19,7 @@ skills/                          # Canonical skill files (edit here)
 ├── blog-editor/                 # Review and edit existing posts
 │   ├── SKILL.md
 │   └── references/
-│       └── voice-examples.example.md
+│       └── corpus.example.md
 ├── blog-translator/             # Translate posts into the blog's other languages
 │   ├── SKILL.md
 │   └── references/
@@ -89,9 +89,10 @@ These conventions apply to all blog content the skills produce:
 - Every post states a reader shift ("from X to Y") that the post has to earn
 - Diagrams, screenshots, and tables where they beat prose; a post whose only image is the cover is a smell
 
-Blog-specific voice lives in `voice-examples.md` in the blog repo root, copied from
-`skills/blog-editor/references/voice-examples.example.md`. The rules above say what is
-wrong; that file says what good looks like for a given blog.
+Blog-specific voice lives in `corpus/<lang>.md` in the blog repo root (`corpus/en.md`, `corpus/es.md`),
+copied from `skills/blog-editor/references/corpus.example.md`. Skills load only the file for the
+post's language. The rules above say what is wrong; those files say what good looks like for a
+given blog, in each language.
 
 ## Verification
 

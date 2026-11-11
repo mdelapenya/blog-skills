@@ -47,6 +47,9 @@ single-language.
   can be detected)
 - **Language conventions file:** language-conventions.md in the blog repo root
   (copy from `skills/blog-translator/references/language-conventions.example.md`)
+- **Voice corpus:** `corpus/<lang>.md` in the blog repo root, one per language
+  (copy from `skills/blog-editor/references/corpus.example.md`); skills load only
+  the file for the post's language
 
 ## Front Matter Defaults
 

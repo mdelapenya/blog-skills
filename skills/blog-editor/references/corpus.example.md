@@ -1,7 +1,10 @@
-# Voice Examples
+# Voice Corpus
 
-> Copy this file to `voice-examples.md` in your blog repo root and fill it with
-> your own writing. `blog-writer` and `blog-editor` read it in Step 0.
+> Copy this file to `corpus/<lang>.md` in your blog repo root, one per language
+> you publish in (`corpus/en.md`, `corpus/es.md`), and fill each with writing
+> originally composed in that language. `blog-writer`, `blog-editor` and
+> `blog-translator` read it in Step 0, and only the file for the post's
+> language, so a bilingual blog never pays for the language it is not working in.
 >
 > It lives in the blog repo, not in this skills repo and not in any agent's
 > memory, so it follows you across machines and across agents.
@@ -12,6 +15,12 @@ is wrong. They cannot tell it what good looks like on *your* blog.
 
 This file is the positive half. It is a corpus, not a style guide: real lines
 you wrote, and the reasoning behind the ones you rewrote.
+
+One file per language, because voice does not translate. An opening that works
+in English, calqued into Spanish, sounds calqued. Fill each file from text you
+wrote in that language, never from a translation. Rewrites of translations
+belong in that language's "Before and after" section: they are the best
+source of what the target voice sounds like.
 
 Keep it short. Five strong examples beat thirty mediocre ones. Prune an entry
 when it stops being the best example of its pattern.
@@ -81,6 +90,8 @@ something you actually wrote.
 
 Phrasings you keep catching in drafts and always cut. One line each, so the
 editor can grep for them.
+
+Anti-patterns are language-specific. List the ones for this file's language only.
 
 - <e.g. "In today's fast-paced world">
 - <e.g. any sentence that opens with "Let's dive in">

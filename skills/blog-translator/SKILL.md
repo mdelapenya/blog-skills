@@ -21,7 +21,7 @@ Your output is always two things: the translated file, and a short **decisions l
 
 Read `blog-config.md` in the blog repo root, in particular its **Languages** section: the default language, the additional languages, the pairing mechanism, and whether slugs are translated. If there is no Languages section, the blog is not set up for multilingual publishing yet: say so, show the author the block from `blog-config.example.md`, and stop. Do not invent a convention.
 
-Also read `voice-examples.md` in the blog repo root if it exists, and `voice-examples.<lang>.md` for the target language if that exists. The target-language corpus is the single highest-value input this skill has: without it you are guessing at register, and register is most of what makes a translation sound translated. If there is no corpus for the target language, say so once, proceed, and offer to start one from the first few translations the author corrects.
+Also read the voice corpus for both languages: `corpus/<target>.md` and `corpus/<source>.md` in the blog repo root, and nothing else in that directory. The target-language corpus is the single highest-value input this skill has: without it you are guessing at register, and register is most of what makes a translation sound translated. Never carry an opening or closing over from the source corpus into the target: an opening that works in one language, calqued into another, sounds calqued. If there is no corpus for the target language, say so once, proceed, and offer to start one from the first few translations the author corrects.
 
 Finally read `references/language-conventions.md` in the blog repo root if it exists, falling back to `references/language-conventions.example.md` in this skill for the shape.
 
@@ -119,7 +119,7 @@ A translation is finished when a reader of the target language cannot tell which
 Example 1: Translate a single post
 User says: "Translate the post about model tiering into Spanish"
 Actions:
-1. Read `blog-config.md` Languages section and the Spanish voice corpus if present
+1. Read `blog-config.md` Languages section and `corpus/es.md` if present
 2. Read the full source post, state its reader shift and its frame
 3. Inventory code blocks, identifiers and links that pass through untouched
 4. Translate section by section, then adapt title, description and slug
@@ -156,7 +156,7 @@ Actions:
 - Tags or categories were translated. They must not be. Revert them to the source values.
 
 **The translation reads correctly but sounds wrong:**
-- There is no voice corpus for the target language. Ask the author to correct one post heavily, then extract the pattern into `voice-examples.<lang>.md` and `language-conventions.md`.
+- There is no voice corpus for the target language. Ask the author to correct one post heavily, then extract the pattern into `corpus/<lang>.md` and `language-conventions.md`.
 - Check register: most translationese is formality drift, not grammar.
 
 **Code blocks differ from the source:**

@@ -19,7 +19,7 @@ You are a blog editor for **your Hugo blog**. Your job is to review and edit exi
 
 Before starting, read `blog-config.md` in the blog repo root for blog-specific settings (domain, theme, publication time, timezone, conventions). If the file does not exist, ask the user for their blog's domain and key settings before proceeding.
 
-Also read `voice-examples.md` in the blog repo root if it exists. It holds the author's own corpus: openings, closings, and before/after rewrites that show what "on voice" means for this blog. The conventions in this skill tell you what is wrong; the corpus tells you what good looks like here, which is the harder half of editing. If the file does not exist, see `references/voice-examples.example.md` for the shape and offer to start one.
+Also read the voice corpus for the post's language: `corpus/<lang>.md` in the blog repo root (for example `corpus/en.md`, `corpus/es.md`). Load only that one file, never the whole directory. Take the language from the post (the **Languages** section of `blog-config.md` says how it is paired); on a single-language blog, read the only file in `corpus/`. It holds the author's own corpus: openings, closings, and before/after rewrites that show what "on voice" means in that language. The conventions in this skill tell you what is wrong; the corpus tells you what good looks like, which is the harder half of editing. If the file does not exist, see `references/corpus.example.md` for the shape and offer to start one.
 
 ### Step 1: Read the post
 
